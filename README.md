@@ -2,7 +2,16 @@
 
 a web server written on swift
 
-###
+### SPM 文档
+
+https://swift.org/package-manager/
+
+### Vapor, Perfect 文档
+
+[PerfectlySoft/Perfect](https://github.com/PerfectlySoft/Perfect), [vapor/vapor](https://github.com/vapor/vapor), [vapor doc](https://docs.vapor.codes/2.0/getting-started/hello-world/)
+
+1. [PerfectlySoft/PerfectDocs](https://github.com/PerfectlySoft/PerfectDocs), Reference and documentation for Perfect (Server-side Swift). Perfect (支持服务器端Swift语言的软件函数库）使用文档和参考手册. https://www.perfect.org
+2. [Jinxiansen/Awesome-Server-Side-Swift](https://github.com/Jinxiansen/Awesome-Server-Side-Swift), Swift 服务端开发 Perfect、Vapor资料。
 
 
 ### How the project starts ?
