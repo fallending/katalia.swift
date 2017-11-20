@@ -23,9 +23,27 @@ extension Droplet {
         ///////////////////////////
         // Fake 接口 开始
         
-        get("fake", "v1", "hello") { req in
+        get("fake", "v1", "get") { req in
             return try JSON (node: [
-                "message": "Hello u!"
+                "message": "Hello GET!"
+                ])
+        }
+        
+        post("fake", "v1", "post") { req in
+            return try JSON (node: [
+                "message": "Hello POST!"
+                ])
+        }
+        
+        post("fake", "v1", "upload") { req in
+            return try JSON (node: [
+                "message": "Hello UPLOAD!"
+                ])
+        }
+        
+        post("fake", "v1", "download") { req in
+            return try JSON (node: [
+                "message": "Hello DOWNLOAD!"
                 ])
         }
         

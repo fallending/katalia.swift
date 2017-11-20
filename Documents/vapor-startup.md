@@ -76,7 +76,51 @@ vapor build --release
 vapor run serve
 ```
 
-## api服务器
+访问：
+```
+curl localhost:8080/plaintext
+```
+
+### [手动搭建](https://docs.vapor.codes/2.0/getting-started/manual/)
+
+## api 接口
+
+Routes.swift
+```
+func setupRoutes() throws {
+        get("hello") { req in
+            var json = JSON()
+            try json.set("hello", "world")
+            return json
+        }
+
+        get("plaintext") { req in
+            return "Hello, world!"
+        }
+
+        // response to requests to /info domain
+        // with a description of the request
+        get("info") { req in
+            return req.description
+        }
+
+        get("description") { req in return req.description }
+        
+        ///////////////////////////
+        // Fake 接口 开始
+        
+        get("fake", "v1", "hello") { req in
+            return try JSON (node: [
+                "message": "Hello u!"
+                ])
+        }
+        
+        // Fake 接口 结束
+        ///////////////////////////
+        
+        try resource("posts", PostController.self)
+    }
+```
 
 
 ##
