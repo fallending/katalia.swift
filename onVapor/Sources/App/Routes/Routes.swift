@@ -22,6 +22,18 @@ extension Droplet {
         
         ///////////////////////////
         // Fake 接口 开始
+
+        get("gw-open", "alibaba.alisports.passport.oauth.getpackageconfig", "1.0") { req in
+            return try JSON (node: [
+                "message": "Hello alibaba.alisports.passport.oauth.getpackageconfig!"
+                ])
+        }
+
+        post("gwp-open", "alibaba.alisports.passport.oauth.getpackageconfig", "1.0") { req in
+            return try JSON (node: [
+                "message": "Hello alibaba.alisports.passport.oauth.getpackageconfig!"
+                ])
+        }
         
         get("fake", "v1", "get") { req in
             return try JSON (node: [

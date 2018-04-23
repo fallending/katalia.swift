@@ -108,6 +108,7 @@ func setupRoutes() throws {
         
         ///////////////////////////
         // Fake 接口 开始
+        // http://localhost:8080/fake/v1/hello
         
         get("fake", "v1", "hello") { req in
             return try JSON (node: [
